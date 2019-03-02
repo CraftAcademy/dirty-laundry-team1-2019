@@ -3,3 +3,11 @@
 <%= month_calendar do |date| %>
   <%= date.day %>
 <% end %>
+
+<% @forecasts.each do |forecast| %>
+  <div class="weather-forecast">
+  <%= forecast['weather'][0]['description'] %>
+  <%= convert_to_celcius(forecast['main']['temp']).round %>
+  <%= convert_to_weekday(forecast['dt_txt']) %>
+  </div>
+<% end %>

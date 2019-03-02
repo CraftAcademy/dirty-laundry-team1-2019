@@ -15,11 +15,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'simple_calendar', '~> 2.0'
+gem 'open-weather-api'
 gem 'webpacker', '~> 3.5'
 gem 'tailwindcss', '~> 0.2.0'
 
 
 group :development, :test do
+  gem 'webmock'
   gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'rspec-rails'

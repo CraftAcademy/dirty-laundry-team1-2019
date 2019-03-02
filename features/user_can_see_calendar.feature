@@ -6,4 +6,4 @@ Feature: User can see a calendar on landing page
 
   Scenario:
      Given I am on the "Landing" page
-     Then I should see a "Calendar"
+     Then I should see "Calendar"
