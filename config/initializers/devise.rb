@@ -1,4 +1,9 @@
 Devise.setup do |config|
+  config.omniauth :facebook,
+                  Rails.application.credentials.facebook[:app_id],
+                  Rails.application.credentials.facebook[:app_secret],
+                  {scope: 'email public_profile', callbackURL: '/auth/facebook/callback'}
+
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
   require 'devise/orm/active_record'
   config.case_insensitive_keys = [:email]

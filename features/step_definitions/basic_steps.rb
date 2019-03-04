@@ -35,3 +35,7 @@ end
 Then("(s/S)how me the page") do
   save_and_open_page
 end
+
+Given("I click {string}") do |element|
+  click_on element
+end

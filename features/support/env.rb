@@ -17,3 +17,8 @@ World Warden::Test::Helpers
 After { Warden.test_reset! }
 
 Cucumber::Rails::Database.javascript_strategy = :truncation
+
+Before do
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new(OmniAuthFixtures.facebook_mock)
+end
